@@ -11,6 +11,7 @@ export default class RandomChar extends Component {
         char: {},
         loading: true
     }
+
     componentDidMount() {
         this.updateChar();
        this.timerId =  setInterval(this.updateChar, 1500)
@@ -42,7 +43,7 @@ export default class RandomChar extends Component {
     }
 
     render() {
-        console.log('render')
+        // console.log('render')
         const { char, loading, error } = this.state;
         const errorMessage = error ? <ErrorMessage /> : null;
         const spinner = loading ? <Spinner /> : null;
